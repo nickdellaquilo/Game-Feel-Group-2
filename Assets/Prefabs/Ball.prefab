@@ -249,6 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeDuration: 0.1
   shakeMagnitude: 0.1
+  globalVars: {fileID: 0}
+  shake: 1
 --- !u!114 &-7719116703073753955
 MonoBehaviour:
   m_ObjectHideFlags: 0

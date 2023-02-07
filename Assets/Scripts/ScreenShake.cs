@@ -10,9 +10,14 @@ public class ScreenShake : MonoBehaviour
     public float shakeMagnitude = 0.5f;
     public GlobalVars globalVars;
     private Vector3 originalPos;
-    private bool shake;
+    private bool shake = true;
 
-    void Start()
+    void Awake()
+    {
+        globalVars = GameObject.Find("EventSystem").GetComponent<GlobalVars>();
+    }
+
+    void Update()
     {
         shake = globalVars.shakeOn;
     }
