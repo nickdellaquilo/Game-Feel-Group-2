@@ -1843,7 +1843,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 8688c7acc658cec4eac93355c7d38e06, type: 3}
+      - m_Target: {fileID: 11500000, guid: a076100fb1aa6e0478406a31fce8c1df, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: 
         m_Mode: 1
@@ -1854,7 +1854,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
   m_IsOn: 1
 --- !u!1 &1368132183
 GameObject:
@@ -2003,6 +2003,7 @@ GameObject:
   - component: {fileID: 1512522234}
   - component: {fileID: 1512522233}
   - component: {fileID: 1512522236}
+  - component: {fileID: 1512522237}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2073,6 +2074,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 5710870460192466538, guid: 69ccfa8dc48d9324099f794272c13e07, type: 3}
+--- !u!114 &1512522237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512522232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a076100fb1aa6e0478406a31fce8c1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorOn: 1
+  trailOn: 1
+  shakeOn: 1
+  soundOn: 1
 --- !u!1001 &1523815544
 PrefabInstance:
   m_ObjectHideFlags: 0

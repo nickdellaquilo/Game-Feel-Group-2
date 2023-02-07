@@ -8,14 +8,22 @@ public class ScreenShake : MonoBehaviour
 
     public float shakeDuration = 0.5f;
     public float shakeMagnitude = 0.5f;
-
+    public GlobalVars globalVars;
     private Vector3 originalPos;
+    private bool shake;
+
+    void Start()
+    {
+        shake = globalVars.shakeOn;
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        originalPos = Camera.main.transform.position;
-        InvokeRepeating("StartShaking", 0f, 0.01f);
-        Invoke("StopShaking", shakeDuration);
+        if (shake) {
+            originalPos = Camera.main.transform.position;
+            InvokeRepeating("StartShaking", 0f, 0.01f);
+            Invoke("StopShaking", shakeDuration);
+        }
     }
 
     void StartShaking()
