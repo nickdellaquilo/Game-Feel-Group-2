@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 7915999153579586674}
   - component: {fileID: 29896087553666202}
   - component: {fileID: 7023957981521865189}
+  - component: {fileID: 7216472417689286730}
+  - component: {fileID: -7719116703073753955}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -233,3 +235,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7216472417689286730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710870460192466538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff15f13081da81b459ea05c5b9cf2ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.1
+  shakeMagnitude: 0.1
+--- !u!114 &-7719116703073753955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710870460192466538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a30c12f87423a544b08d18c3dcc4052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteY: -10
