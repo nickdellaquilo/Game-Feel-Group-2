@@ -2328,6 +2328,11 @@ MonoBehaviour:
   trailOn: 1
   shakeOn: 1
   soundOn: 1
+  colorToggle: {fileID: 1340006330}
+  flashToggle: {fileID: 238457664}
+  trailToggle: {fileID: 53061905}
+  shakeToggle: {fileID: 1566880}
+  soundToggle: {fileID: 724652931}
 --- !u!4 &986011763
 Transform:
   m_ObjectHideFlags: 0
