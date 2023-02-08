@@ -7,12 +7,19 @@ public class FlashScreen : MonoBehaviour
 {
     public float flashDuration = 0.1f;
     public Color flashColor = Color.white;
-
+    public GlobalVars globalVars;
     private SpriteRenderer spriteRenderer;
+    private bool flashOn = true;
 
     private void Start()
     {
+        globalVars = GameObject.Find("GlobalVars").GetComponent<GlobalVars>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void Update() 
+    {
+        flashOn = globalVars.flashOn;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
