@@ -8,6 +8,6 @@ public class EmitParticles : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        particleSystem.Emit(5);
+        particleSystem.Emit(10);
     }
 }

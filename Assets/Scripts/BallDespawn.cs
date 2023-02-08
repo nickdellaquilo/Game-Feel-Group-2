@@ -10,7 +10,7 @@ public class BallDespawn : MonoBehaviour
     {
         if (transform.position.y < deleteY)
         {
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }
