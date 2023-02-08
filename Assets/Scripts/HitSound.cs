@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class HitSound : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioClip sound;
+    [SerializeField] public float pitchMin = 0.9f;
+    [SerializeField] public float pitchMax = 1.1f;
+    private AudioSource audioSource;
+
+    private void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        audioSource.pitch = Random.Range(pitchMin, pitchMax);
+        audioSource.PlayOneShot(sound);
     }
 }

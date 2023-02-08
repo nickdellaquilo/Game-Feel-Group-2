@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    
+    private SpriteRenderer spriteRenderer;
 
-
-    
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
+        Debug.Log("Switch color");
     }
 }
