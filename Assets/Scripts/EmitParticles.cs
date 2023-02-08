@@ -4,10 +4,24 @@ using UnityEngine;
 
 public class EmitParticles : MonoBehaviour
 {
+    public GlobalVars globalVars;
     public ParticleSystem particleSystem;
+    private bool prtclOn;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Start()
     {
-        particleSystem.Emit(10);
+        globalVars = GameObject.Find("GlobalVars").GetComponent<GlobalVars>();
+    }
+
+    void Update()
+    {
+        prtclOn = globalVars.prtclOn;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (prtclOn) {
+            particleSystem.Emit(5);
+        }
     }
 }

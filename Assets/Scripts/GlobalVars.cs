@@ -7,15 +7,17 @@ public class GlobalVars : MonoBehaviour
 {
     [SerializeField] public bool colorOn = true;
     [SerializeField] public bool flashOn = true;
-    [SerializeField] public bool trailOn = true;
+    [SerializeField] public bool prtclOn = true;
     [SerializeField] public bool shakeOn = true;
     [SerializeField] public bool soundOn = true;
+    [SerializeField] public bool trailOn = true;
 
     public Toggle colorToggle;
     public Toggle flashToggle;
-    public Toggle trailToggle;
+    public Toggle prtclToggle;
     public Toggle shakeToggle;
     public Toggle soundToggle;
+    public Toggle trailToggle;
 
     void Awake()
     {
@@ -27,8 +29,8 @@ public class GlobalVars : MonoBehaviour
             ToggleFlash();
         });
     
-        trailToggle.onValueChanged.AddListener(delegate {
-            ToggleTrail();
+        prtclToggle.onValueChanged.AddListener(delegate {
+            ToggleParticle();
         });
 
         shakeToggle.onValueChanged.AddListener(delegate {
@@ -38,6 +40,10 @@ public class GlobalVars : MonoBehaviour
         soundToggle.onValueChanged.AddListener(delegate {
             ToggleSound();
         }); 
+
+        trailToggle.onValueChanged.AddListener(delegate {
+            ToggleTrail();
+        });
     }
 
     void ToggleColor()
@@ -50,9 +56,9 @@ public class GlobalVars : MonoBehaviour
         flashOn = !flashOn;
     }
 
-    void ToggleTrail()
+    void ToggleParticle()
     {
-        trailOn = !trailOn;
+        prtclOn = !prtclOn;
     }
 
     void ToggleShake()
@@ -63,5 +69,10 @@ public class GlobalVars : MonoBehaviour
     void ToggleSound()
     {
         soundOn = !soundOn;
+    }
+
+    void ToggleTrail()
+    {
+        trailOn = !trailOn;
     }
 }
