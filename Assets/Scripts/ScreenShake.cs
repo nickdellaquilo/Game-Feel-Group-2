@@ -14,7 +14,7 @@ public class ScreenShake : MonoBehaviour
 
     void Awake()
     {
-        globalVars = GameObject.Find("EventSystem").GetComponent<GlobalVars>();
+        globalVars = GameObject.Find("GlobalVars").GetComponent<GlobalVars>();
     }
 
     void Update()
