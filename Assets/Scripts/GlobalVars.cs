@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GlobalVars : MonoBehaviour
 {
     [SerializeField] public bool colorOn = true;
+    [SerializeField] public bool flashOn = true;
     [SerializeField] public bool trailOn = true;
     [SerializeField] public bool shakeOn = true;
     [SerializeField] public bool soundOn = true;
