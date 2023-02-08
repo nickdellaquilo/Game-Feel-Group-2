@@ -19,11 +19,25 @@ public class GlobalVars : MonoBehaviour
 
     void Awake()
     {
-        //colorToggle.onValueChanged.AddListener(new UnityAction<bool>(ToggleColor));
-        //flashToggle.onValueChanged.AddListener(new UnityAction<bool>(ToggleFlash));
-        //trailToggle.onValueChanged.AddListener(new UnityAction<bool>(ToggleTrail));
-        //shakeToggle.onValueChanged.AddListener(new UnityAction<bool>(ToggleShake));
-        //soundToggle.onValueChanged.AddListener(new UnityAction<bool>(ToggleSound));
+        colorToggle.onValueChanged.AddListener(delegate {
+            ToggleColor();
+        });
+
+        flashToggle.onValueChanged.AddListener(delegate {
+            ToggleFlash();
+        });
+    
+        trailToggle.onValueChanged.AddListener(delegate {
+            ToggleTrail();
+        });
+
+        shakeToggle.onValueChanged.AddListener(delegate {
+            ToggleShake();
+        });
+
+        soundToggle.onValueChanged.AddListener(delegate {
+            ToggleSound();
+        }); 
     }
 
     void ToggleColor()

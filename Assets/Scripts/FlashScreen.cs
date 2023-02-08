@@ -24,7 +24,9 @@ public class FlashScreen : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (flashOn) {
         StartCoroutine(Flash());
+        }
     }
 
     private IEnumerator Flash()
